@@ -1,6 +1,6 @@
 {
   "name": "capacitor-udid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin to retrieve a persistent UDID across app reinstalls on iOS and Android",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -24,8 +24,12 @@
   },
   "keywords": [
     "capacitor",
-    "plugin",
-    "native"
+    "capacitor-plugin",
+    "udid",
+    "unique-device-id",
+    "persistent-udid",
+    "device-identifier",
+    "device-uuid"
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
