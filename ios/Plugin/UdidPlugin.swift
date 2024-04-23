@@ -9,10 +9,14 @@ import Capacitor
 public class UdidPlugin: CAPPlugin {
     private let implementation = Udid()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+   @objc func getUdid(_ call: CAPPluginCall) {
+        let udid = implementation.getUniqueId()
+        if udid.isEmpty {
+            call.reject("UDID not available")
+        } else {
+            call.resolve([
+                "value": udid
+            ])
+        }
     }
 }

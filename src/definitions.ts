@@ -1,3 +1,3 @@
 export interface UdidPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getUdid(): Promise<{ value: string }>;
 }
